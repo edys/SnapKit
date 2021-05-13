@@ -12,6 +12,7 @@
 		2D7D46E3264D2E4A0039EEDF /* DataLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7D46D5264D2E4A0039EEDF /* DataLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D7D4757264D31760039EEDF /* SPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4756264D31760039EEDF /* SPD.framework */; };
 		2D7D4758264D31760039EEDF /* SPD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4756264D31760039EEDF /* SPD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D7D476A264D3DA80039EEDF /* Factory.Swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D4769264D3DA80039EEDF /* Factory.Swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		2D7D46E0264D2E4A0039EEDF /* DataLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerTests.swift; sourceTree = "<group>"; };
 		2D7D46E2264D2E4A0039EEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D7D4756264D31760039EEDF /* SPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D7D4769264D3DA80039EEDF /* Factory.Swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.Swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		2D7D46D4264D2E4A0039EEDF /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				2D7D4768264D3D4D0039EEDF /* DI */,
 				2D7D46D5264D2E4A0039EEDF /* DataLayer.h */,
 				2D7D46D6264D2E4A0039EEDF /* Info.plist */,
 			);
@@ -111,6 +114,14 @@
 				2D7D4756264D31760039EEDF /* SPD.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D7D4768264D3D4D0039EEDF /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				2D7D4769264D3DA80039EEDF /* Factory.Swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +186,7 @@
 				TargetAttributes = {
 					2D7D46D1264D2E4A0039EEDF = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					2D7D46DA264D2E4A0039EEDF = {
 						CreatedOnToolsVersion = 12.4;
@@ -222,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7D476A264D3DA80039EEDF /* Factory.Swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,6 +382,7 @@
 		2D7D46E7264D2E4A0039EEDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
@@ -385,6 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = walden.rhys.DataLayer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -393,6 +408,7 @@
 		2D7D46E8264D2E4A0039EEDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
@@ -417,6 +433,7 @@
 		2D7D46EA264D2E4A0039EEDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
 				INFOPLIST_FILE = DataLayerTests/Info.plist;
@@ -435,6 +452,7 @@
 		2D7D46EB264D2E4A0039EEDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
 				INFOPLIST_FILE = DataLayerTests/Info.plist;

@@ -13,6 +13,7 @@
 		2D7D473C264D30DB0039EEDF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2D7D473B264D30DB0039EEDF /* SnapKit */; };
 		2D7D474A264D31540039EEDF /* BusinessLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4749264D31540039EEDF /* BusinessLayer.framework */; };
 		2D7D474B264D31540039EEDF /* BusinessLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4749264D31540039EEDF /* BusinessLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D7D4772264D3DFE0039EEDF /* Factory.Swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D4771264D3DFE0039EEDF /* Factory.Swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		2D7D4694264D2DCD0039EEDF /* PresentationLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationLayerTests.swift; sourceTree = "<group>"; };
 		2D7D4696264D2DCD0039EEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D7D4749264D31540039EEDF /* BusinessLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BusinessLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D7D4771264D3DFE0039EEDF /* Factory.Swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.Swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		2D7D4688264D2DCD0039EEDF /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				2D7D4770264D3DEA0039EEDF /* DI */,
 				2D7D4689264D2DCD0039EEDF /* PresentationLayer.h */,
 				2D7D468A264D2DCD0039EEDF /* Info.plist */,
 			);
@@ -113,6 +116,14 @@
 				2D7D4749264D31540039EEDF /* BusinessLayer.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D7D4770264D3DEA0039EEDF /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				2D7D4771264D3DFE0039EEDF /* Factory.Swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 				TargetAttributes = {
 					2D7D4685264D2DCD0039EEDF = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					2D7D468E264D2DCD0039EEDF = {
 						CreatedOnToolsVersion = 12.4;
@@ -230,6 +242,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7D4772264D3DFE0039EEDF /* Factory.Swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +390,7 @@
 		2D7D469B264D2DCD0039EEDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
@@ -393,6 +407,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = walden.rhys.PresentationLayer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -401,6 +416,7 @@
 		2D7D469C264D2DCD0039EEDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
@@ -425,6 +441,7 @@
 		2D7D469E264D2DCD0039EEDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
 				INFOPLIST_FILE = PresentationLayerTests/Info.plist;
@@ -443,6 +460,7 @@
 		2D7D469F264D2DCD0039EEDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
 				INFOPLIST_FILE = PresentationLayerTests/Info.plist;

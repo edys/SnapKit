@@ -19,6 +19,7 @@
 		2D7D4746264D31430039EEDF /* PresentationLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4744264D31430039EEDF /* PresentationLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D7D475B264D31880039EEDF /* SPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D475A264D31880039EEDF /* SPD.framework */; };
 		2D7D475C264D31880039EEDF /* SPD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D475A264D31880039EEDF /* SPD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D7D4776264D3EF00039EEDF /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D4775264D3EF00039EEDF /* Factory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		2D7D4740264D31110039EEDF /* BusinessLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BusinessLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7D4744264D31430039EEDF /* PresentationLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = PresentationLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7D475A264D31880039EEDF /* SPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D7D4775264D3EF00039EEDF /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 		2D7D4648264D2D5F0039EEDF /* App */ = {
 			isa = PBXGroup;
 			children = (
+				2D7D4774264D3EC70039EEDF /* DI */,
 				2D7D4649264D2D5F0039EEDF /* AppDelegate.swift */,
 				2D7D464B264D2D5F0039EEDF /* SceneDelegate.swift */,
 				2D7D464D264D2D5F0039EEDF /* ViewController.swift */,
@@ -161,6 +164,14 @@
 				2D7D4740264D31110039EEDF /* BusinessLayer.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D7D4774264D3EC70039EEDF /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				2D7D4775264D3EF00039EEDF /* Factory.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7D4776264D3EF00039EEDF /* Factory.swift in Sources */,
 				2D7D464E264D2D5F0039EEDF /* ViewController.swift in Sources */,
 				2D7D464A264D2D5F0039EEDF /* AppDelegate.swift in Sources */,
 				2D7D464C264D2D5F0039EEDF /* SceneDelegate.swift in Sources */,

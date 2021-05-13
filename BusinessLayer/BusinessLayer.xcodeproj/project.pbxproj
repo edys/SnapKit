@@ -14,6 +14,7 @@
 		2D7D4750264D31630039EEDF /* DataLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D474E264D31630039EEDF /* DataLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D7D4753264D316A0039EEDF /* SPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4752264D316A0039EEDF /* SPD.framework */; };
 		2D7D4754264D316A0039EEDF /* SPD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4752264D316A0039EEDF /* SPD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2D7D476E264D3DD50039EEDF /* Factory.Swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D476D264D3DD50039EEDF /* Factory.Swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		2D7D46BC264D2E140039EEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D7D474E264D31630039EEDF /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7D4752264D316A0039EEDF /* SPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D7D476D264D3DD50039EEDF /* Factory.Swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.Swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 		2D7D46AE264D2E130039EEDF /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
+				2D7D476C264D3DB80039EEDF /* DI */,
 				2D7D46AF264D2E130039EEDF /* BusinessLayer.h */,
 				2D7D46B0264D2E130039EEDF /* Info.plist */,
 			);
@@ -117,6 +120,14 @@
 				2D7D474E264D31630039EEDF /* DataLayer.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2D7D476C264D3DB80039EEDF /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				2D7D476D264D3DD50039EEDF /* Factory.Swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +192,7 @@
 				TargetAttributes = {
 					2D7D46AB264D2E130039EEDF = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
 					};
 					2D7D46B4264D2E140039EEDF = {
 						CreatedOnToolsVersion = 12.4;
@@ -228,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D7D476E264D3DD50039EEDF /* Factory.Swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +388,7 @@
 		2D7D46C1264D2E140039EEDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
@@ -391,6 +405,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = walden.rhys.BusinessLayer;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -399,6 +414,7 @@
 		2D7D46C2264D2E140039EEDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
@@ -423,6 +439,7 @@
 		2D7D46C4264D2E140039EEDF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
 				INFOPLIST_FILE = BusinessLayerTests/Info.plist;
@@ -441,6 +458,7 @@
 		2D7D46C5264D2E140039EEDF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 39VRYZ44BV;
 				INFOPLIST_FILE = BusinessLayerTests/Info.plist;
