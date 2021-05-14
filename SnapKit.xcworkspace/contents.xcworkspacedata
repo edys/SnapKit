@@ -5,15 +5,15 @@
       location = "group:SPD/SPD.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DataLayer/DataLayer.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:BusinessLayer/BusinessLayer.xcodeproj">
+      location = "group:App/App.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:PresentationLayer/PresentationLayer.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:App/App.xcodeproj">
+      location = "group:BusinessLayer/BusinessLayer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DataLayer/DataLayer.xcodeproj">
    </FileRef>
 </Workspace>

@@ -9,7 +9,7 @@ import Foundation
 import ReSwift
 import DataLayer
 
-/// a reducer that takes a ImageActionProtocol actions and reduces posts state
+/// a reducer that takes a ImageActionProtocol actions and reduces image state
 internal class ImageReducer: AppReducerProtocol
 {
     /// The reduce method

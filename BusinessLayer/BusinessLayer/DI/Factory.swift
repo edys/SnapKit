@@ -20,7 +20,7 @@ public class Factory: DependencyFactory
         })
     }
     
-    /// Create a singleton  reducer for reducing PostsState
+    /// Create a singleton  reducer for reducing ImageState
     private func imageReducer() -> AppReducerProtocol {
        return shared(ImageReducer())
     }
