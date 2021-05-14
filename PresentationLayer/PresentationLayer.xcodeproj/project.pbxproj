@@ -13,7 +13,9 @@
 		2D7D473C264D30DB0039EEDF /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2D7D473B264D30DB0039EEDF /* SnapKit */; };
 		2D7D474A264D31540039EEDF /* BusinessLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4749264D31540039EEDF /* BusinessLayer.framework */; };
 		2D7D474B264D31540039EEDF /* BusinessLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4749264D31540039EEDF /* BusinessLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2D7D4772264D3DFE0039EEDF /* Factory.Swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D4771264D3DFE0039EEDF /* Factory.Swift */; };
+		2D7D4772264D3DFE0039EEDF /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D4771264D3DFE0039EEDF /* Factory.swift */; };
+		2DBF5A50264E92410008D75E /* SPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBF5A4F264E92410008D75E /* SPD.framework */; };
+		2DBF5A51264E92410008D75E /* SPD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBF5A4F264E92410008D75E /* SPD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				2DBF5A51264E92410008D75E /* SPD.framework in Embed Frameworks */,
 				2D7D474B264D31540039EEDF /* BusinessLayer.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -48,7 +51,8 @@
 		2D7D4694264D2DCD0039EEDF /* PresentationLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationLayerTests.swift; sourceTree = "<group>"; };
 		2D7D4696264D2DCD0039EEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D7D4749264D31540039EEDF /* BusinessLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BusinessLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D7D4771264D3DFE0039EEDF /* Factory.Swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.Swift; sourceTree = "<group>"; };
+		2D7D4771264D3DFE0039EEDF /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		2DBF5A4F264E92410008D75E /* SPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DBF5A50264E92410008D75E /* SPD.framework in Frameworks */,
 				2D7D474A264D31540039EEDF /* BusinessLayer.framework in Frameworks */,
 				2D7D473C264D30DB0039EEDF /* SnapKit in Frameworks */,
 			);
@@ -113,6 +118,7 @@
 		2D7D4748264D31540039EEDF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DBF5A4F264E92410008D75E /* SPD.framework */,
 				2D7D4749264D31540039EEDF /* BusinessLayer.framework */,
 			);
 			name = Frameworks;
@@ -121,7 +127,7 @@
 		2D7D4770264D3DEA0039EEDF /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				2D7D4771264D3DFE0039EEDF /* Factory.Swift */,
+				2D7D4771264D3DFE0039EEDF /* Factory.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -242,7 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7D4772264D3DFE0039EEDF /* Factory.Swift in Sources */,
+				2D7D4772264D3DFE0039EEDF /* Factory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,11 @@
 		2D7D46E3264D2E4A0039EEDF /* DataLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7D46D5264D2E4A0039EEDF /* DataLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2D7D4757264D31760039EEDF /* SPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4756264D31760039EEDF /* SPD.framework */; };
 		2D7D4758264D31760039EEDF /* SPD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4756264D31760039EEDF /* SPD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2D7D476A264D3DA80039EEDF /* Factory.Swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D4769264D3DA80039EEDF /* Factory.Swift */; };
+		2D7D476A264D3DA80039EEDF /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D4769264D3DA80039EEDF /* Factory.swift */; };
+		2DBF5A1C264E78630008D75E /* ImageApiServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A1B264E78630008D75E /* ImageApiServiceProtocol.swift */; };
+		2DBF5A21264E7A300008D75E /* ImageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A20264E7A300008D75E /* ImageDTO.swift */; };
+		2DBF5A25264E7B500008D75E /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A24264E7B500008D75E /* DataError.swift */; };
+		2DBF5A28264E7C180008D75E /* ImageApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A27264E7C180008D75E /* ImageApiService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +51,11 @@
 		2D7D46E0264D2E4A0039EEDF /* DataLayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLayerTests.swift; sourceTree = "<group>"; };
 		2D7D46E2264D2E4A0039EEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D7D4756264D31760039EEDF /* SPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D7D4769264D3DA80039EEDF /* Factory.Swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.Swift; sourceTree = "<group>"; };
+		2D7D4769264D3DA80039EEDF /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		2DBF5A1B264E78630008D75E /* ImageApiServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageApiServiceProtocol.swift; sourceTree = "<group>"; };
+		2DBF5A20264E7A300008D75E /* ImageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTO.swift; sourceTree = "<group>"; };
+		2DBF5A24264E7B500008D75E /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
+		2DBF5A27264E7C180008D75E /* ImageApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageApiService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,9 +100,12 @@
 		2D7D46D4264D2E4A0039EEDF /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				2DBF5A1F264E7A120008D75E /* DTO */,
+				2DBF5A1A264E78410008D75E /* APIServices */,
 				2D7D4768264D3D4D0039EEDF /* DI */,
 				2D7D46D5264D2E4A0039EEDF /* DataLayer.h */,
 				2D7D46D6264D2E4A0039EEDF /* Info.plist */,
+				2DBF5A24264E7B500008D75E /* DataError.swift */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -119,9 +130,26 @@
 		2D7D4768264D3D4D0039EEDF /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				2D7D4769264D3DA80039EEDF /* Factory.Swift */,
+				2D7D4769264D3DA80039EEDF /* Factory.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		2DBF5A1A264E78410008D75E /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF5A1B264E78630008D75E /* ImageApiServiceProtocol.swift */,
+				2DBF5A27264E7C180008D75E /* ImageApiService.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		2DBF5A1F264E7A120008D75E /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF5A20264E7A300008D75E /* ImageDTO.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -234,7 +262,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7D476A264D3DA80039EEDF /* Factory.Swift in Sources */,
+				2DBF5A28264E7C180008D75E /* ImageApiService.swift in Sources */,
+				2DBF5A1C264E78630008D75E /* ImageApiServiceProtocol.swift in Sources */,
+				2D7D476A264D3DA80039EEDF /* Factory.swift in Sources */,
+				2DBF5A25264E7B500008D75E /* DataError.swift in Sources */,
+				2DBF5A21264E7A300008D75E /* ImageDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

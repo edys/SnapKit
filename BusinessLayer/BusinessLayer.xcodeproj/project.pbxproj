@@ -14,7 +14,15 @@
 		2D7D4750264D31630039EEDF /* DataLayer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D474E264D31630039EEDF /* DataLayer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2D7D4753264D316A0039EEDF /* SPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4752264D316A0039EEDF /* SPD.framework */; };
 		2D7D4754264D316A0039EEDF /* SPD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4752264D316A0039EEDF /* SPD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		2D7D476E264D3DD50039EEDF /* Factory.Swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D476D264D3DD50039EEDF /* Factory.Swift */; };
+		2D7D476E264D3DD50039EEDF /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D476D264D3DD50039EEDF /* Factory.swift */; };
+		2DBF5A2B264E7FEF0008D75E /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A2A264E7FEF0008D75E /* AppState.swift */; };
+		2DBF5A2E264E80D60008D75E /* ImageState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A2D264E80D60008D75E /* ImageState.swift */; };
+		2DBF5A33264E83890008D75E /* ImageActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A32264E83890008D75E /* ImageActions.swift */; };
+		2DBF5A39264E89550008D75E /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A38264E89550008D75E /* AppReducer.swift */; };
+		2DBF5A3D264E89960008D75E /* ImageReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A3C264E89960008D75E /* ImageReducer.swift */; };
+		2DBF5A41264E8E610008D75E /* ImageReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A40264E8E610008D75E /* ImageReducerTests.swift */; };
+		2DBF5A47264E90670008D75E /* ImageThunks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A46264E90670008D75E /* ImageThunks.swift */; };
+		2DBF5A4C264E910A0008D75E /* RefreshImageThunkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A4B264E910A0008D75E /* RefreshImageThunkTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +59,15 @@
 		2D7D46BC264D2E140039EEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D7D474E264D31630039EEDF /* DataLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DataLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7D4752264D316A0039EEDF /* SPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D7D476D264D3DD50039EEDF /* Factory.Swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.Swift; sourceTree = "<group>"; };
+		2D7D476D264D3DD50039EEDF /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
+		2DBF5A2A264E7FEF0008D75E /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		2DBF5A2D264E80D60008D75E /* ImageState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageState.swift; sourceTree = "<group>"; };
+		2DBF5A32264E83890008D75E /* ImageActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageActions.swift; sourceTree = "<group>"; };
+		2DBF5A38264E89550008D75E /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		2DBF5A3C264E89960008D75E /* ImageReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReducer.swift; sourceTree = "<group>"; };
+		2DBF5A40264E8E610008D75E /* ImageReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReducerTests.swift; sourceTree = "<group>"; };
+		2DBF5A46264E90670008D75E /* ImageThunks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageThunks.swift; sourceTree = "<group>"; };
+		2DBF5A4B264E910A0008D75E /* RefreshImageThunkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshImageThunkTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +113,15 @@
 		2D7D46AE264D2E130039EEDF /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
+				2DBF5A44264E90440008D75E /* Thunks */,
+				2DBF5A3B264E89770008D75E /* Reducers */,
+				2DBF5A31264E83550008D75E /* Actions */,
 				2D7D476C264D3DB80039EEDF /* DI */,
 				2D7D46AF264D2E130039EEDF /* BusinessLayer.h */,
 				2D7D46B0264D2E130039EEDF /* Info.plist */,
+				2DBF5A2A264E7FEF0008D75E /* AppState.swift */,
+				2DBF5A2D264E80D60008D75E /* ImageState.swift */,
+				2DBF5A38264E89550008D75E /* AppReducer.swift */,
 			);
 			path = BusinessLayer;
 			sourceTree = "<group>";
@@ -107,6 +129,8 @@
 		2D7D46B9264D2E140039EEDF /* BusinessLayerTests */ = {
 			isa = PBXGroup;
 			children = (
+				2DBF5A4A264E90B70008D75E /* Thunks */,
+				2DBF5A3F264E8E3B0008D75E /* Reducers */,
 				2D7D46BA264D2E140039EEDF /* BusinessLayerTests.swift */,
 				2D7D46BC264D2E140039EEDF /* Info.plist */,
 			);
@@ -125,9 +149,49 @@
 		2D7D476C264D3DB80039EEDF /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				2D7D476D264D3DD50039EEDF /* Factory.Swift */,
+				2D7D476D264D3DD50039EEDF /* Factory.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		2DBF5A31264E83550008D75E /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF5A32264E83890008D75E /* ImageActions.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		2DBF5A3B264E89770008D75E /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF5A3C264E89960008D75E /* ImageReducer.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		2DBF5A3F264E8E3B0008D75E /* Reducers */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF5A40264E8E610008D75E /* ImageReducerTests.swift */,
+			);
+			path = Reducers;
+			sourceTree = "<group>";
+		};
+		2DBF5A44264E90440008D75E /* Thunks */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF5A46264E90670008D75E /* ImageThunks.swift */,
+			);
+			path = Thunks;
+			sourceTree = "<group>";
+		};
+		2DBF5A4A264E90B70008D75E /* Thunks */ = {
+			isa = PBXGroup;
+			children = (
+				2DBF5A4B264E910A0008D75E /* RefreshImageThunkTests.swift */,
+			);
+			path = Thunks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,7 +304,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D7D476E264D3DD50039EEDF /* Factory.Swift in Sources */,
+				2D7D476E264D3DD50039EEDF /* Factory.swift in Sources */,
+				2DBF5A33264E83890008D75E /* ImageActions.swift in Sources */,
+				2DBF5A2E264E80D60008D75E /* ImageState.swift in Sources */,
+				2DBF5A47264E90670008D75E /* ImageThunks.swift in Sources */,
+				2DBF5A2B264E7FEF0008D75E /* AppState.swift in Sources */,
+				2DBF5A3D264E89960008D75E /* ImageReducer.swift in Sources */,
+				2DBF5A39264E89550008D75E /* AppReducer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +318,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DBF5A41264E8E610008D75E /* ImageReducerTests.swift in Sources */,
 				2D7D46BB264D2E140039EEDF /* BusinessLayerTests.swift in Sources */,
+				2DBF5A4C264E910A0008D75E /* RefreshImageThunkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
