@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D563D12264FCD3B00C33284 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D563D11264FCD3B00C33284 /* RootViewController.swift */; };
+		2D563D1A264FEA5E00C33284 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D563D19264FEA5E00C33284 /* LoadingCell.swift */; };
+		2D563D1F264FEC9600C33284 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D563D1E264FEC9600C33284 /* UIView.swift */; };
+		2D563D23264FF19E00C33284 /* ErrorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D563D22264FF19E00C33284 /* ErrorCell.swift */; };
 		2D7D4690264D2DCD0039EEDF /* PresentationLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7D4686264D2DCD0039EEDF /* PresentationLayer.framework */; };
 		2D7D4695264D2DCD0039EEDF /* PresentationLayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D4694264D2DCD0039EEDF /* PresentationLayerTests.swift */; };
 		2D7D4697264D2DCD0039EEDF /* PresentationLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D7D4689264D2DCD0039EEDF /* PresentationLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -16,6 +20,8 @@
 		2D7D4772264D3DFE0039EEDF /* Factory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7D4771264D3DFE0039EEDF /* Factory.swift */; };
 		2DBF5A50264E92410008D75E /* SPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBF5A4F264E92410008D75E /* SPD.framework */; };
 		2DBF5A51264E92410008D75E /* SPD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DBF5A4F264E92410008D75E /* SPD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2DE28274265111F0008B358A /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE28273265111F0008B358A /* ImageCell.swift */; };
+		2DE2827F26512040008B358A /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2827E26512040008B358A /* ImageCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +50,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2D563D11264FCD3B00C33284 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		2D563D19264FEA5E00C33284 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
+		2D563D1E264FEC9600C33284 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		2D563D22264FF19E00C33284 /* ErrorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCell.swift; sourceTree = "<group>"; };
 		2D7D4686264D2DCD0039EEDF /* PresentationLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PresentationLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7D4689264D2DCD0039EEDF /* PresentationLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PresentationLayer.h; sourceTree = "<group>"; };
 		2D7D468A264D2DCD0039EEDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,6 +63,8 @@
 		2D7D4749264D31540039EEDF /* BusinessLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = BusinessLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7D4771264D3DFE0039EEDF /* Factory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factory.swift; sourceTree = "<group>"; };
 		2DBF5A4F264E92410008D75E /* SPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE28273265111F0008B358A /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		2DE2827E26512040008B358A /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +89,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2D563D10264FCD1600C33284 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2D563D11264FCD3B00C33284 /* RootViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2D563D18264FEA1600C33284 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				2D563D19264FEA5E00C33284 /* LoadingCell.swift */,
+				2D563D22264FF19E00C33284 /* ErrorCell.swift */,
+				2DE28273265111F0008B358A /* ImageCell.swift */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		2D563D1D264FEC7900C33284 /* Extenstions */ = {
+			isa = PBXGroup;
+			children = (
+				2D563D1E264FEC9600C33284 /* UIView.swift */,
+			);
+			path = Extenstions;
+			sourceTree = "<group>";
+		};
 		2D7D467C264D2DCD0039EEDF = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +137,10 @@
 		2D7D4688264D2DCD0039EEDF /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				2DE2827D26512023008B358A /* Helper */,
+				2D563D1D264FEC7900C33284 /* Extenstions */,
+				2D563D18264FEA1600C33284 /* ViewCells */,
+				2D563D10264FCD1600C33284 /* ViewControllers */,
 				2D7D4770264D3DEA0039EEDF /* DI */,
 				2D7D4689264D2DCD0039EEDF /* PresentationLayer.h */,
 				2D7D468A264D2DCD0039EEDF /* Info.plist */,
@@ -130,6 +172,14 @@
 				2D7D4771264D3DFE0039EEDF /* Factory.swift */,
 			);
 			path = DI;
+			sourceTree = "<group>";
+		};
+		2DE2827D26512023008B358A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2DE2827E26512040008B358A /* ImageCache.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,7 +298,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D563D1F264FEC9600C33284 /* UIView.swift in Sources */,
+				2D563D1A264FEA5E00C33284 /* LoadingCell.swift in Sources */,
+				2D563D12264FCD3B00C33284 /* RootViewController.swift in Sources */,
+				2D563D23264FF19E00C33284 /* ErrorCell.swift in Sources */,
 				2D7D4772264D3DFE0039EEDF /* Factory.swift in Sources */,
+				2DE2827F26512040008B358A /* ImageCache.swift in Sources */,
+				2DE28274265111F0008B358A /* ImageCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +461,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PresentationLayer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -431,6 +488,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PresentationLayer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

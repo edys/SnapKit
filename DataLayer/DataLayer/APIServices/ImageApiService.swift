@@ -13,6 +13,13 @@ public class ImageApiService: ImageApiServiceProtocol
 {
     private let imagelistURL = "https://picsum.photos/v2/list"
     
+    private let numberGenerator:NumberGeneratorProtocol
+    
+    init(numberGenerator: NumberGeneratorProtocol) {
+        self.numberGenerator = numberGenerator
+    }
+    
+    
     /// Get and returns a random Image.
     public func GetRandomImage() -> AnyPublisher<ImageDTO, DataError> {
         
@@ -22,7 +29,9 @@ public class ImageApiService: ImageApiServiceProtocol
             .validate()
             .publishDecodable(type: [ImageDTO].self)
             .value()
-            .map({ $0[0]}) // update to random number
+            .map({ (images) -> ImageDTO in
+                return images[self.numberGenerator.getNextInt(max: images.count)]
+            })
             .mapError { (error) -> DataError in
                 print ("\(error)")
                 return DataError.somthingWhenWrong

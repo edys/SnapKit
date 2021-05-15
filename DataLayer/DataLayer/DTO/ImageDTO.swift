@@ -22,7 +22,7 @@ import Foundation
 public struct ImageDTO: Codable{
     
     /// Id
-    public let id: Int
+    public let id: String
     
     /// author
     public let author:String

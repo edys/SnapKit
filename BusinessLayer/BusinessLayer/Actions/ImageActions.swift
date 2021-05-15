@@ -23,3 +23,29 @@ public struct LoadedImageAction: ImageActionProtocol
 }
 /// Action for signaling an error has occured while loading images
 public struct ErrorLoadingImageAction: ImageActionProtocol {}
+
+
+public struct ReorderImageAction: ImageActionProtocol{
+    
+    public init(
+        sourceIndex: Int,
+        destinationIndex: Int
+    ) {
+            self.sourceIndex = sourceIndex
+            self.destinationIndex = destinationIndex
+    }
+    
+    public let sourceIndex: Int
+    public let destinationIndex: Int
+}
+
+public struct DeleteImageAction: ImageActionProtocol{
+    
+    public init(
+        index: Int
+    ) {
+            self.index = index
+    }
+    
+    public let index: Int
+}

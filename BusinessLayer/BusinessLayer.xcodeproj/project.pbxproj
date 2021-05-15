@@ -23,6 +23,7 @@
 		2DBF5A41264E8E610008D75E /* ImageReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A40264E8E610008D75E /* ImageReducerTests.swift */; };
 		2DBF5A47264E90670008D75E /* ImageThunks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A46264E90670008D75E /* ImageThunks.swift */; };
 		2DBF5A4C264E910A0008D75E /* RefreshImageThunkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A4B264E910A0008D75E /* RefreshImageThunkTests.swift */; };
+		2DE28277265117A5008B358A /* ThunkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE28276265117A5008B358A /* ThunkProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		2DBF5A40264E8E610008D75E /* ImageReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageReducerTests.swift; sourceTree = "<group>"; };
 		2DBF5A46264E90670008D75E /* ImageThunks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageThunks.swift; sourceTree = "<group>"; };
 		2DBF5A4B264E910A0008D75E /* RefreshImageThunkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshImageThunkTests.swift; sourceTree = "<group>"; };
+		2DE28276265117A5008B358A /* ThunkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThunkProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				2DBF5A2A264E7FEF0008D75E /* AppState.swift */,
 				2DBF5A2D264E80D60008D75E /* ImageState.swift */,
 				2DBF5A38264E89550008D75E /* AppReducer.swift */,
+				2DE28276265117A5008B358A /* ThunkProtocol.swift */,
 			);
 			path = BusinessLayer;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			files = (
 				2D7D476E264D3DD50039EEDF /* Factory.swift in Sources */,
 				2DBF5A33264E83890008D75E /* ImageActions.swift in Sources */,
+				2DE28277265117A5008B358A /* ThunkProtocol.swift in Sources */,
 				2DBF5A2E264E80D60008D75E /* ImageState.swift in Sources */,
 				2DBF5A47264E90670008D75E /* ImageThunks.swift in Sources */,
 				2DBF5A2B264E7FEF0008D75E /* AppState.swift in Sources */,
@@ -469,6 +473,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BusinessLayer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -495,6 +500,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = BusinessLayer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

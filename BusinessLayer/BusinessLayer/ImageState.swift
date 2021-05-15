@@ -21,13 +21,13 @@ public enum ImageState
 public struct LoadedImageState {
     
     /// Id
-    public let id: Int
+    public let id: String
     
     /// author
     public let author:String
     
     /// download_url
-    public let download_url:String
+    public let download_url:String 
 }
 
 

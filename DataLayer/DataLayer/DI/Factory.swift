@@ -11,8 +11,11 @@ import FieryCrucible
 /// Di Factory for the data layer
 public class Factory: DependencyFactory
 {
-    public func imageApiServiceProtocol() -> ImageApiServiceProtocol
-    {
-        return shared(ImageApiService())
+    public func imageApiServiceProtocol() -> ImageApiServiceProtocol {
+        return shared(ImageApiService(numberGenerator: randomNumberGenerator()))
+    }
+    
+    public func randomNumberGenerator() -> NumberGeneratorProtocol {
+        return shared(RandomNumberGenerator())
     }
 }

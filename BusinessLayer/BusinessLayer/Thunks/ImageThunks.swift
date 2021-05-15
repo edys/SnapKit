@@ -12,7 +12,7 @@ import ReSwiftThunk
 import Combine
 
 // the middle ware Thunk for loading a image and adding it to the state
-public class RefreshImageThunk
+public class LoadImageThunk : ThunkProtocol
 {
     let imageApiService: ImageApiServiceProtocol
     

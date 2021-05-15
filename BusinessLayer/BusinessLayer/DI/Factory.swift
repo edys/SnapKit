@@ -9,23 +9,32 @@ import Foundation
 import FieryCrucible
 import ReSwift
 import ReSwiftThunk
+import DataLayer
 
 /// Di Factory for the business layer
 public class Factory: DependencyFactory
 {
-    /// Creates a singleton appstore
+    let dataLayerFactory = DataLayer.Factory()
+    
+    
+    /// Creates a singleton appsStore
     public func appStore() -> Store<AppState> {
         return shared (factory: { () -> Store<AppState> in
             return generateAppStore()
         })
     }
     
+    public func loadImageThunk() -> ThunkProtocol{
+        return shared(LoadImageThunk(imageApiService: dataLayerFactory.imageApiServiceProtocol()))
+    }
+
+    
     /// Create a singleton  reducer for reducing ImageState
     private func imageReducer() -> AppReducerProtocol {
        return shared(ImageReducer())
     }
     
-    /// helper method for crating an appstore instance - TODO extract to  class
+    /// helper method for crating an appstore instance - TODO extract to protocol and class
     private func generateAppStore() -> Store<AppState> {
         
         let reducers : [AppReducerProtocol] = [

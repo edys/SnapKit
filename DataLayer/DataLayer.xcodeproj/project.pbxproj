@@ -17,6 +17,7 @@
 		2DBF5A21264E7A300008D75E /* ImageDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A20264E7A300008D75E /* ImageDTO.swift */; };
 		2DBF5A25264E7B500008D75E /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A24264E7B500008D75E /* DataError.swift */; };
 		2DBF5A28264E7C180008D75E /* ImageApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBF5A27264E7C180008D75E /* ImageApiService.swift */; };
+		2DE2827B26511B0C008B358A /* RandomNumberGeneratorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE2827A26511B0C008B358A /* RandomNumberGeneratorProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		2DBF5A20264E7A300008D75E /* ImageDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDTO.swift; sourceTree = "<group>"; };
 		2DBF5A24264E7B500008D75E /* DataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		2DBF5A27264E7C180008D75E /* ImageApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageApiService.swift; sourceTree = "<group>"; };
+		2DE2827A26511B0C008B358A /* RandomNumberGeneratorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomNumberGeneratorProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 		2D7D46D4264D2E4A0039EEDF /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
+				2DE2827926511AE6008B358A /* Helper */,
 				2DBF5A1F264E7A120008D75E /* DTO */,
 				2DBF5A1A264E78410008D75E /* APIServices */,
 				2D7D4768264D3D4D0039EEDF /* DI */,
@@ -150,6 +153,14 @@
 				2DBF5A20264E7A300008D75E /* ImageDTO.swift */,
 			);
 			path = DTO;
+			sourceTree = "<group>";
+		};
+		2DE2827926511AE6008B358A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				2DE2827A26511B0C008B358A /* RandomNumberGeneratorProtocol.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +276,7 @@
 				2DBF5A28264E7C180008D75E /* ImageApiService.swift in Sources */,
 				2DBF5A1C264E78630008D75E /* ImageApiServiceProtocol.swift in Sources */,
 				2D7D476A264D3DA80039EEDF /* Factory.swift in Sources */,
+				2DE2827B26511B0C008B358A /* RandomNumberGeneratorProtocol.swift in Sources */,
 				2DBF5A25264E7B500008D75E /* DataError.swift in Sources */,
 				2DBF5A21264E7A300008D75E /* ImageDTO.swift in Sources */,
 			);
@@ -423,6 +435,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DataLayer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -449,6 +462,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DataLayer/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
