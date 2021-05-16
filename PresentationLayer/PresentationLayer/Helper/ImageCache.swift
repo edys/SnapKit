@@ -6,7 +6,7 @@
 //
 
 /// TAKEN FROM https://developer.apple.com/documentation/uikit/uiimage/asynchronously_loading_images_into_table_and_collection_views
-/// Woth modifications
+/// With modifications
 
 import UIKit
 import Foundation
@@ -16,8 +16,8 @@ public protocol ImageCacheProtocol
     func load(url: NSURL, completion: @escaping (NSURL, UIImage?) -> Swift.Void)
 }
 
-    public class ImageCache : ImageCacheProtocol{
-    
+public class ImageCache : ImageCacheProtocol{
+
     public static let publicCache = ImageCache()
     var placeholderImage = UIImage(systemName: "rectangle")!
     private let cachedImages = NSCache<NSURL, UIImage>()

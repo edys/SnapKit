@@ -160,7 +160,6 @@ extension RootViewController: UITableViewDelegate
     }
     
     
-    
     public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
         guard  sourceIndexPath.row != destinationIndexPath.row else {
@@ -225,8 +224,11 @@ extension RootViewController: StoreSubscriber
 {
     public typealias StoreSubscriberStateType = [ImageState]
     
+    /// Update UI with when image state changes
     public func newState(state: StoreSubscriberStateType) {
-        listView.reloadData()
+        
+        DispatchQueue.main.async { [unowned self] in
+            self.listView.reloadData()
+        }
     }
 }
-
