@@ -26,7 +26,7 @@ public class LoadImageThunk : ThunkProtocol
     public func action() -> Thunk<AppState> {
         return Thunk<AppState> { [unowned self] dispatch, getState in
             
-            // thunk is allready running, dont repeat actions
+            // thunk is all ready running, dont repeat actions
             if self.cancellable != nil {
                 
                 return

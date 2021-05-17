@@ -133,7 +133,7 @@ extension RootViewController: UITableViewDelegate
     
     /// Display the ability to swipe to reveal the delete row action only for a loaded cell
     public func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
-        return false //isLoadedCell(indexPath: indexPath)
+        return isLoadedCell(indexPath: indexPath)
     }
     
     /// Allow reordering
@@ -196,7 +196,7 @@ extension RootViewController: UITableViewDataSource
         }
     }
     
-    /// update the cell with the downlaoded image 
+    /// update the cell with the downlaoded image
     private func UpdateCellForImage(url:NSURL,image:UIImage?)
     {
         guard image != nil else {
@@ -207,7 +207,7 @@ extension RootViewController: UITableViewDataSource
             if case let ImageState.loaded(loadedState: loadedImageState) = appStore.state.images[index] {
                 if loadedImageState.download_url == url.absoluteString {
                     if let cell = listView.cellForRow(at: IndexPath(row: index, section: 1)) as? ImageCell {
-                        cell.downLoadedImageView.image = image
+                        cell.downLoadedImageView.image = image ?? UIImage(named: "error")
                     }
                 }
             }
