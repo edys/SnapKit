@@ -113,44 +113,39 @@ public class RootViewController : UIViewController{
 }
 extension RootViewController: UITableViewDelegate
 {
+    private func isLoadedCell(indexPath: IndexPath) -> Bool
+    {
+        switch appStore.state.images[indexPath.row] {
+        
+        case .loaded(loadedState: _):
+            return true
+        
+        default:
+            return false
+        }
+    }
+    
+    /// Display the ability to swipe to reveal the delete row action only for a loaded cell
     public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         
-        switch appStore.state.images[indexPath.row] {
-        case .error:
-            fallthrough
-        case .loading:
-            return .none
-        default:
-            return .delete
-        }
+        return isLoadedCell(indexPath: indexPath) ? .delete : .none
     }
     
+    /// Display the ability to swipe to reveal the delete row action only for a loaded cell
     public func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
-        switch appStore.state.images[indexPath.row] {
-        case .error:
-            fallthrough
-        case .loading:
-            return false
-        default:
-            return true
-        }
+        return false //isLoadedCell(indexPath: indexPath)
     }
     
+    /// Allow reordering
     public  func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        switch appStore.state.images[indexPath.row] {
-        case .error:
-            fallthrough
-        case .loading:
-            return false
-        default:
-            return true
-        }
+        return isLoadedCell(indexPath: indexPath)
     }
     
+    /// Delete action
     public func tableView(_ tableView: UITableView,
                      commit editingStyle: UITableViewCell.EditingStyle,
                    forRowAt indexPath: IndexPath) {
-        guard editingStyle == .delete else {
+        guard isLoadedCell(indexPath: indexPath) && editingStyle == .delete else {
             return
         }
         
@@ -159,10 +154,10 @@ extension RootViewController: UITableViewDelegate
         self.appStore.dispatch(action)
     }
     
-    
+    /// Reordering action
     public func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         
-        guard  sourceIndexPath.row != destinationIndexPath.row else {
+        guard isLoadedCell(indexPath: sourceIndexPath) && isLoadedCell(indexPath: destinationIndexPath) else {
             return
         }
         
@@ -183,10 +178,10 @@ extension RootViewController: UITableViewDataSource
         
         switch imageState {
         
-        case .loaded(loadedState: let lis):
+        case .loaded(loadedState: let loadedImageState):
             let cell = tableView.dequeueReusableCell(withIdentifier: imageCellName) as! ImageCell
-            cell.authourLabel.text = lis.author
-            imageCache.load(url: NSURL(string: lis.download_url)!) {[weak self] (url, image) in
+            cell.authourLabel.text = loadedImageState.author
+            imageCache.load(url: NSURL(string: loadedImageState.download_url)!) {[weak self] (url, image) in
                 self?.UpdateCellForImage(url: url,image: image)
             }
             return cell
@@ -201,6 +196,7 @@ extension RootViewController: UITableViewDataSource
         }
     }
     
+    /// update the cell with the downlaoded image 
     private func UpdateCellForImage(url:NSURL,image:UIImage?)
     {
         guard image != nil else {
@@ -208,8 +204,8 @@ extension RootViewController: UITableViewDataSource
         }
         
         for index in 0..<appStore.state.images.count {
-            if case let ImageState.loaded(loadedState: lis) = appStore.state.images[index] {
-                if lis.download_url == url.absoluteString {
+            if case let ImageState.loaded(loadedState: loadedImageState) = appStore.state.images[index] {
+                if loadedImageState.download_url == url.absoluteString {
                     if let cell = listView.cellForRow(at: IndexPath(row: index, section: 1)) as? ImageCell {
                         cell.downLoadedImageView.image = image
                     }
