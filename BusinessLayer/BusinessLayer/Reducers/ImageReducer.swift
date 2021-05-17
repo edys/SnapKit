@@ -26,7 +26,13 @@ internal class ImageReducer: AppReducerProtocol
         switch imageAction {
         
         case is LoadingImageAction:
-            currentState.images.append(ImageState.loading)
+            
+            if currentState.images.count > 0 && lastImageIsError(currentState.images) {
+                currentState.images[currentState.images.count-1] = ImageState.loading
+            } else {
+                currentState.images.append(ImageState.loading)
+            }
+            
             
         case is ErrorLoadingImageAction:
             currentState.images[currentState.images.count-1] = ImageState.error
@@ -62,6 +68,16 @@ internal class ImageReducer: AppReducerProtocol
         }
         
         return (true, currentState)
+    }
+    
+    private func lastImageIsError(_ images: [ImageState]) -> Bool
+    {
+        switch images[images.count-1] {
+        case .error:
+            return true
+        default:
+            return false
+        }
     }
 
     // TODO extract mapping to it own testable class Map<t1,t2> : MapProtocol
