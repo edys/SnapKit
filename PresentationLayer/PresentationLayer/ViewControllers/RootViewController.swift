@@ -126,18 +126,21 @@ extension RootViewController: UITableViewDelegate
     }
     
     /// Display the ability to swipe to reveal the delete row action only for a loaded cell
-    public func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+    public func tableView(_ tableView: UITableView,
+                          editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         
         return isLoadedCell(indexPath: indexPath) ? .delete : .none
     }
     
     /// Display the ability to swipe to reveal the delete row action only for a loaded cell
-    public func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+    public func tableView(_ tableView: UITableView,
+                          shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
         return isLoadedCell(indexPath: indexPath)
     }
     
     /// Allow reordering
-    public  func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+    public  func tableView(_ tableView: UITableView,
+                           canMoveRowAt indexPath: IndexPath) -> Bool {
         return isLoadedCell(indexPath: indexPath)
     }
     

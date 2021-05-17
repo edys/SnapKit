@@ -70,8 +70,7 @@ internal class ImageReducer: AppReducerProtocol
         return (true, currentState)
     }
     
-    private func lastImageIsError(_ images: [ImageState]) -> Bool
-    {
+    private func lastImageIsError(_ images: [ImageState]) -> Bool {
         switch images[images.count-1] {
         case .error:
             return true
@@ -81,8 +80,7 @@ internal class ImageReducer: AppReducerProtocol
     }
 
     // TODO extract mapping to it own testable class Map<t1,t2> : MapProtocol
-    private func mapImage(dto: ImageDTO) -> LoadedImageState
-    {
-        return LoadedImageState(id: dto.id, author: dto.author, download_url: "https://picsum.photos/id/\(dto.id)/100/100")
+    private func mapImage(dto: ImageDTO) -> LoadedImageState {
+        return LoadedImageState(id: dto.id, author: dto.author, download_url: "https://picsum.photos/id/\(dto.id)/300/300")
     }
 }
